@@ -1,24 +1,24 @@
-function rockPaperScissors(playerSelection, computerSelection)) {
+function playRound(playerSelection, computerSelection) {
 
 }
 
 function getComputerChoice() {
     let num = Math.floor((Math.random() * 3) + 1);
     if (num == 1) {
-        let compChoice = "Rock";
-        return compChoice;
+        let computerSelection = "Rock";
+        return computerSelection;
     }
     else if (num == 2) {
-        let compChoice = "Paper";
-        return compChoice;
+        let computerSelection = "Paper";
+        return computerSelection;
     }
     else {
-        let compChoice = "Scissors";
-        return compChoice;
+        let computerSelection = "Scissors";
+        return computerSelection;
     }
 } 
 
-function playerSelection() {
+/*function playerSelection() {
     let num = prompt("Please enter 'Rock', 'Paper', or 'Scissors'.");
     if (num.toUpperCase() == "ROCK") {
         let userChoice = "Rock";
@@ -35,5 +35,5 @@ function playerSelection() {
     else {
         alert("You did not enter a valid choice. Please try again.")
         playerSelection();
-    }
+    }*/
 }
