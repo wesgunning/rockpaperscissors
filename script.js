@@ -29,7 +29,7 @@ function playRound(playerSelection, computerSelection) {
 
 }
 function game() {
-const playerSelection = "Rock";
+const playerSelection = getPlayerChoice();
 const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
 }
@@ -52,23 +52,22 @@ function getComputerChoice() {
 }
 
 // Prompt user for player choice
-/*function getPlayerChoice() {
+function getPlayerChoice() {
+    let userChoice;
     let num = prompt("Please enter 'Rock', 'Paper', or 'Scissors'.");
     if (num.toUpperCase() == "ROCK") {
-        let userChoice = "Rock";
-        return userChoice;
+        userChoice = "Rock";
     }
     else if (num.toUpperCase() == "PAPER") {
-        let userChoice = "Paper";
-        return userChoice;
+        userChoice = "Paper";
     }
     else if (num.toUpperCase() == "SCISSORS") {
-        let userChoice = "Scissors";
-        return userChoice;
+        userChoice = "Scissors";
     }
     else {
         alert("You did not enter a valid choice. Please try again.")
         getPlayerChoice();
     }
+console.log("User choice:",userChoice);
+return userChoice;
 }
-*/
