@@ -1,4 +1,4 @@
-// Best of 5 games wins
+/*// Best of 5 games wins
 let compScore = 0;
 let userScore = 0;
 for (let i = 0; i < 5; i++) {
@@ -12,7 +12,10 @@ for (let i = 0; i < 5; i++) {
     }
     console.log("Score: \nComputer:",compScore,"\nPlayer:",userScore);
 
-}
+}*/
+
+game()
+
 if (compScore > userScore) {
     console.log("Computer wins the round!");
 }
