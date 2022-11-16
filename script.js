@@ -14,7 +14,20 @@ for (let i = 0; i < 5; i++) {
 
 }*/
 
-game()
+// Player choice
+function getPlayerChoice(e) {
+    let text = (this.id[0].toUpperCase() + this.id.slice(1));
+    return text;
+}
+
+// Listen for button click
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener('click', getPlayerChoice)
+})
+
+
+/*game()
 
 if (compScore > userScore) {
     console.log("Computer wins the round!");
@@ -80,23 +93,4 @@ function getComputerChoice() {
         return computerSelection;
     }
 }
-
-// Prompt user for player choice
-function getPlayerChoice() {
-    let userChoice;
-    let num = prompt("Please enter 'Rock', 'Paper', or 'Scissors'.");
-    if (num.toUpperCase() == "ROCK") {
-        userChoice = "Rock";
-    }
-    else if (num.toUpperCase() == "PAPER") {
-        userChoice = "Paper";
-    }
-    else if (num.toUpperCase() == "SCISSORS") {
-        userChoice = "Scissors";
-    }
-    else {
-        alert("You did not enter a valid choice. Please try again.")
-        getPlayerChoice();
-    }
-return userChoice;
-}
+*/
