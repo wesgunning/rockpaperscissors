@@ -14,27 +14,43 @@ for (let i = 0; i < 5; i++) {
 
 }*/
 
-// Player choice
-function getPlayerChoice(e) {
-    let text = (this.id[0].toUpperCase() + this.id.slice(1));
-    return text;
-}
-
 // Listen for button click
+let text;
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
-    button.addEventListener('click', getPlayerChoice)
+    button.addEventListener('click', getPlayerChoice);
 })
 
-
-/*game()
-
-if (compScore > userScore) {
-    console.log("Computer wins the round!");
+function game() {
+    let winner;
+    const playerSelection = text;
+    const computerSelection = getComputerChoice();
+    console.log(playRound(playerSelection, computerSelection));
+    }
+    
+// Player choice
+function getPlayerChoice(e) {
+    text = (this.id[0].toUpperCase() + this.id.slice(1));
+    game();
 }
-else {
-    console.log("Player wins the round!");
+
+// Randomly generate computer choice
+function getComputerChoice() {
+    let num = Math.floor((Math.random() * 3) + 1);
+    if (num == 1) {
+        let computerSelection = "Rock";
+        return computerSelection;
+    }
+    else if (num == 2) {
+        let computerSelection = "Paper";
+        return computerSelection;
+    }
+    else {
+        let computerSelection = "Scissors";
+        return computerSelection;
+    }
 }
+
 function playRound(playerSelection, computerSelection) {
     console.log("Player chooses: ", playerSelection + "!");
     console.log("Computer chooses: ", computerSelection + "!");
@@ -70,27 +86,13 @@ function playRound(playerSelection, computerSelection) {
     }
 return;
 }
-function game() {
-let winner;
-const playerSelection = getPlayerChoice();
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
-}
 
-// Randomly generate computer choice
-function getComputerChoice() {
-    let num = Math.floor((Math.random() * 3) + 1);
-    if (num == 1) {
-        let computerSelection = "Rock";
-        return computerSelection;
-    }
-    else if (num == 2) {
-        let computerSelection = "Paper";
-        return computerSelection;
-    }
-    else {
-        let computerSelection = "Scissors";
-        return computerSelection;
-    }
+/*if (compScore > userScore) {
+    console.log("Computer wins the round!");
 }
-*/
+else {
+    console.log("Player wins the round!");
+}*/
+
+
+
