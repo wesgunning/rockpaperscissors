@@ -2,3 +2,8 @@
     height: 200px;
     border: 2px solid black;
 }
+
+#score {
+    height: 100px;
+    border: 2px solid red;
+}

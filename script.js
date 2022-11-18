@@ -13,9 +13,14 @@ for (let i = 0; i < 5; i++) {
     console.log("Score: \nComputer:",compScore,"\nPlayer:",userScore);
 
 }*/
-// Div text box
+// Results div text box
 const results = document.querySelector('#results');
-//results.innerHTML = 
+
+// Score div box
+let userScore = 0;
+let compScore = 0;
+const score = document.querySelector('#score');
+score.innerHTML = "Player: " + userScore + "<br>Computer: " + compScore;
 
 // Listen for button click
 let text;
@@ -25,10 +30,9 @@ buttons.forEach((button) => {
 })
 
 function game() {
-    let winner;
     const playerSelection = text;
     const computerSelection = getComputerChoice();
-    console.log(playRound(playerSelection, computerSelection));
+    playRound(playerSelection, computerSelection);
     }
     
 // Player choice
@@ -55,6 +59,7 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
+    let winner;
     results.innerHTML = ("Player chooses: " + playerSelection + "!<br>");
     results.innerHTML += ("Computer chooses: " + computerSelection + "!<br>");
     if (computerSelection == 'Rock') {
@@ -87,8 +92,16 @@ function playRound(playerSelection, computerSelection) {
             winner = 'computer';
         }
     }
-return;
+    if (winner == 'player') {
+        userScore += 1;
+    }
+    else {
+        compScore += 1;
+    }
+    score.innerHTML = "Player: " + userScore + "<br>Computer: " + compScore;
 }
+
+
 
 /*if (compScore > userScore) {
     console.log("Computer wins the round!");
