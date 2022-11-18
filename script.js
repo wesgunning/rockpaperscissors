@@ -60,6 +60,11 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
     let winner;
+    if (compScore > 4 || userScore > 4) {
+        userScore = 0;
+        compScore = 0;
+        score.innerHTML = "Player: " + userScore + "<br>Computer: " + compScore;
+    }
     results.innerHTML = ("Player chooses: " + playerSelection + "!<br>");
     results.innerHTML += ("Computer chooses: " + computerSelection + "!<br>");
     if (computerSelection == 'Rock') {
@@ -99,6 +104,12 @@ function playRound(playerSelection, computerSelection) {
         compScore += 1;
     }
     score.innerHTML = "Player: " + userScore + "<br>Computer: " + compScore;
+    if (userScore == '5') {
+        score.innerHTML += "<br>Player wins this round!";
+    }
+    else if (compScore == '5') {
+        score.innerHTML += "<br>Computer wins this round!";
+    }
 }
 
 
