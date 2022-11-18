@@ -13,6 +13,9 @@ for (let i = 0; i < 5; i++) {
     console.log("Score: \nComputer:",compScore,"\nPlayer:",userScore);
 
 }*/
+// Div text box
+const results = document.querySelector('#results');
+//results.innerHTML = 
 
 // Listen for button click
 let text;
@@ -52,35 +55,35 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    console.log("Player chooses: ", playerSelection + "!");
-    console.log("Computer chooses: ", computerSelection + "!");
+    results.innerHTML = ("Player chooses: " + playerSelection + "!<br>");
+    results.innerHTML += ("Computer chooses: " + computerSelection + "!<br>");
     if (computerSelection == 'Rock') {
         if (playerSelection == 'Paper') {
-            console.log("Player wins!");
+            results.innerHTML += ("Player wins!");
             winner = 'player';
         }
         else {
-            console.log("Computer wins!");
+            results.innerHTML += ("Computer wins!");
             winner = 'computer'
         }
     }
     else if (computerSelection == 'Paper') {
         if (playerSelection == 'Scissors') {
-            console.log("Player wins!");
+            results.innerHTML += ("Player wins!");
             winner = 'player';
         }
         else {
-            console.log("Computer wins!");
+            results.innerHTML += ("Computer wins!");
             winner = 'computer';
         }
     }
     else {
         if (playerSelection == 'Rock') {
-            console.log("Player wins!");
+            results.innerHTML += ("Player wins!");
             winner = 'player';
         }
         else {
-            console.log("Computer wins!");
+            results.innerHTML += ("Computer wins!");
             winner = 'computer';
         }
     }
