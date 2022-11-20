@@ -114,12 +114,3 @@ function playRound(playerSelection, computerSelection) {
 
 
 
-/*if (compScore > userScore) {
-    console.log("Computer wins the round!");
-}
-else {
-    console.log("Player wins the round!");
-}*/
-
-
-

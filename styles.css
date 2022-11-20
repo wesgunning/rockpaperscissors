@@ -1,3 +1,8 @@
+#selection{
+    display: flex;
+    justify-content: space-around;
+}
+
 #results {
     height: 200px;
     border: 2px solid black;
@@ -6,4 +11,14 @@
 #score {
     height: 100px;
     border: 2px solid red;
+}
+
+#UIcontainer {
+    max-width: 50%;
+    margin: 10% 25%;
+}
+
+button {
+    height: 6em;
+    width: 6em;
 }
