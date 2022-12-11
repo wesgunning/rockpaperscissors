@@ -1,16 +1,33 @@
+body {
+    background-color: rgb(56, 55, 55);
+    font-family:'Courier New', Courier, monospace;
+}
+
+i {
+    font-size: 2em;
+    margin-top: 5px;
+}
+
 #selection{
     display: flex;
     justify-content: space-around;
 }
 
 #results {
-    height: 200px;
+    height: 80px;
     border: 2px solid black;
+    margin: 2em auto 2em;
+    padding: 1em;
+    color: white;
+    font-size: 1.3em;
 }
 
 #score {
-    height: 100px;
+    height: 130px;
     border: 2px solid red;
+    padding: 1em;
+    font-size: 1.3em;
+    color: white;
 }
 
 #UIcontainer {
@@ -21,4 +38,5 @@
 button {
     height: 6em;
     width: 6em;
+    font-size: 1.5em;
 }

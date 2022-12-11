@@ -20,7 +20,7 @@ const results = document.querySelector('#results');
 let userScore = 0;
 let compScore = 0;
 const score = document.querySelector('#score');
-score.innerHTML = "Player: " + userScore + "<br>Computer: " + compScore;
+score.innerHTML = "Player: " + userScore + "<br>Computer: " + compScore + "<br>";
 
 // Listen for button click
 let text;
@@ -68,36 +68,36 @@ function playRound(playerSelection, computerSelection) {
     results.innerHTML = ("Player chooses: " + playerSelection + "!<br>");
     results.innerHTML += ("Computer chooses: " + computerSelection + "!<br>");
     if (computerSelection == playerSelection) {
-        results.innerHTML += ("It's a tie!");
+        results.innerHTML += ("<br>It's a tie!");
         winner = 'tie';
     }
     else if (computerSelection == 'Rock') {
         if (playerSelection == 'Paper') {
-            results.innerHTML += ("You win! Paper beats rock!");
+            results.innerHTML += ("<br>You win! Paper beats rock!");
             winner = 'player';
         }
         else {
-            results.innerHTML += ("Computer wins! Rock beats scissors!");
+            results.innerHTML += ("<br>Computer wins! Rock beats scissors!");
             winner = 'computer'
         }
     }
     else if (computerSelection == 'Paper') {
         if (playerSelection == 'Scissors') {
-            results.innerHTML += ("You win! Scissors beat paper!");
+            results.innerHTML += ("<br>You win! Scissors beat paper!");
             winner = 'player';
         }
         else {
-            results.innerHTML += ("Computer wins! Paper beats rock!");
+            results.innerHTML += ("<br>Computer wins! Paper beats rock!");
             winner = 'computer';
         }
     }
     else {
         if (playerSelection == 'Rock') {
-            results.innerHTML += ("You win! Rock beats scissors!");
+            results.innerHTML += ("<br>You win! Rock beats scissors!");
             winner = 'player';
         }
         else {
-            results.innerHTML += ("Computer wins! Scissors beat paper!");
+            results.innerHTML += ("<br>Computer wins! Scissors beat paper!");
             winner = 'computer';
         }
     }
@@ -107,7 +107,7 @@ function playRound(playerSelection, computerSelection) {
     else if (winner == 'computer') {
         compScore += 1;
     }
-    score.innerHTML = "Player: " + userScore + "<br>Computer: " + compScore;
+    score.innerHTML = "Player: " + userScore + "<br>Computer: " + compScore + "<br>";
     if (userScore == '5') {
         score.innerHTML += "<br>You win this round!";
     }
