@@ -14,25 +14,29 @@ i {
 }
 
 #results {
-    height: 80px;
+    height: 90px;
     border: 2px solid black;
+    border-radius: 4px;
     margin: 2em auto 2em;
     padding: 1em;
     color: white;
     font-size: 1.3em;
+    background-color: grey;
 }
 
 #score {
     height: 130px;
-    border: 2px solid red;
+    border: 2px solid black;
+    border-radius: 4px;
     padding: 1em;
     font-size: 1.3em;
     color: white;
+    background-color: grey;
 }
 
 #UIcontainer {
     max-width: 50%;
-    margin: 10% 25%;
+    margin: 5% 25% auto;
 }
 
 button {

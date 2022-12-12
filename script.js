@@ -109,10 +109,10 @@ function playRound(playerSelection, computerSelection) {
     }
     score.innerHTML = "Player: " + userScore + "<br>Computer: " + compScore + "<br>";
     if (userScore == '5') {
-        score.innerHTML += "<br>You win this round!";
+        score.innerHTML += "<br>You win this round!<br>Choose your selection to begin the next round.";
     }
     else if (compScore == '5') {
-        score.innerHTML += "<br>Computer wins this round!<br>Choose your selection to begin next round.";
+        score.innerHTML += "<br>Computer wins this round!<br>Choose your selection to begin the next round.";
     }
 }
 
